@@ -83,9 +83,9 @@ and Next() / New() (for adjacency).
 In the case of descendcy relationships there also exist the special PushFirst() and PopLast() methods which create an additional Startwatch
 that is linked to the parent. 
 
-	* PushFirst() the start time of the parent is shared with the child. 
+  * PushFirst() the start time of the parent is shared with the child. 
 	
-	* PopLast() shares the start time with it's closest sibling, and it's end time with its parent.
+  * PopLast() start time is the same as end time of closest older sibling, and end time is the same as its parent end time
 
 Attaching to the WhenComplete() callbacks allow for capturing event data in realtime as the event is being completed (which in some cases such 
 as PopLast() can be difficult or impossible to know about ahead of time). The primary extra overhead associated with PerformanceEvenTracker

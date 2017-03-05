@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>Startwatch</id>
+    <version>1.0.0</version>
+    <authors>hannasm</authors>
+    <owners>hannasm</owners>
+    <licenseUrl>https://github.com/hannasm/StartwatchDotnet/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/hannasm/StartwatchDotnet</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A high performance alternative to System.Diagnostics.Stopwatch that assumes some different use cases</description>
+    <releaseNotes>
+	* 1.0.0 - initial release
+  </releaseNotes>
+    <copyright>Copyright 2017</copyright>
+  </metadata>
+  <files>
+    <file src="..\readme.md" target="content\README_Startwatch.md" />
+    <file src="..\LICENSE.md" target="content\LICENSE_Startwatch.md" />
+    <file src="bin\Release\Startwatch.dll" target="lib" />
+    <file src="bin\Release\Startwatch.pdb" target="lib" />
+    <!-- Files in content are added to project
+    <file src="bin\Release\PROJECTNAME.jpg" target="content" />
+    -->
+  </files>
+</package>
+<!-- vim: set expandtab ts=2 sw=2:  -->

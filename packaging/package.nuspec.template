@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>PACKAGE_NAME</id>
+    <version>AUTO_GENERATED_FROM_METADATA</version>
+    <authors>USERNAME</authors>
+    <owners>USERNAME</owners>
+    <licenseUrl>https://URL_TO_LICENSE</licenseUrl>
+    <projectUrl>https://URL_TO_PROJECT</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>DESCRIPTION</description>
+    <releaseNotes>
+      AUTO_GENERATED_FROM_METADATA
+    </releaseNotes>
+    <copyright>COPYRIGHT YEAR</copyright>
+  </metadata>
+  <files>
+    <file src="..\readme.md" target="content\README_TODO_PROJECTNAME.md" />
+    <file src="..\LICENSE.md" target="content\LICENSE_TODO_PROJECTNAME.md" />
+    <!-- Includes assemblies in lib
+    <file src="bin\Release\PROJECTNAME.dll" target="lib" />
+    <file src="bin\Release\PROJECTNAME.pdb" target="lib" />
+    -->
+    <!-- Files in content are added to project
+    <file src="bin\Release\PROJECTNAME.jpg" target="content" />
+    -->
+  </files>
+</package>
+<!-- vim: set expandtab ts=2 sw=2:  -->

@@ -1,5 +1,5 @@
-﻿using ExpressiveLogging.V1;
-using ExpressiveLogging.V1.Counters;
+﻿using ExpressiveLogging;
+using ExpressiveLogging.Counters;
 using System;
 using System.Collections.Generic;
 using System.Linq;

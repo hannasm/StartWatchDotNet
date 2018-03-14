@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Runtime.Versioning;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
@@ -92,7 +89,7 @@ namespace StartwatchDiagnostics
         {
             _stopTimestamp = new RefTimestamp();
             _startTimestamp = new RefTimestamp();
-            GetTimerFunc(out _startTimestamp.Value);
+            Startwatch.QueryPerformanceCounter(out _startTimestamp.Value);
         }
         /// <summary>
         /// private constructor allows creation of Startwatch in started state, using system dependent ticks
@@ -131,23 +128,15 @@ namespace StartwatchDiagnostics
         {
             if (_stopTimestamp.Value == 0)
             {
-                GetTimerFunc(out _stopTimestamp.Value);
+                Startwatch.QueryPerformanceCounter(out _stopTimestamp.Value);
                 return true;
             }
             return false;
         }
                 
-        delegate bool GetTimerFuncType(out long val);
-        static readonly GetTimerFuncType GetTimerFunc;
         readonly static long TicksPerMillisecond;
         
         static Startwatch() {
-            long freq;
-            if (Stopwatch.IsHighResolution) {
-                GetTimerFunc = QueryPerformanceCounter;
-            } else {
-                GetTimerFunc = QueryPerformanceCounterFallback;
-            }
             TicksPerMillisecond = Stopwatch.Frequency / 1000;
         }
 
@@ -160,7 +149,7 @@ namespace StartwatchDiagnostics
                 return _stopTimestamp.Value - _startTimestamp.Value;
             } else if (_startTimestamp.Value != 0) {
                 long result;
-                GetTimerFunc(out result);
+                Startwatch.QueryPerformanceCounter(out result);
                 return result - _startTimestamp.Value;
             } else {
                 return 0;
@@ -212,7 +201,7 @@ namespace StartwatchDiagnostics
         /// </summary>
         DateTime PerfCounterRawDateTime() {
             long result;
-            GetTimerFunc(out result);
+            Startwatch.QueryPerformanceCounter(out result);
             return DateTime.Now.AddSeconds(-result / Stopwatch.Frequency);
         }
         /// <summary>
@@ -286,7 +275,7 @@ namespace StartwatchDiagnostics
             if (watch.IsRunning)
             {
                 long result;
-                GetTimerFunc(out result);
+                Startwatch.QueryPerformanceCounter(out result);
                 return new Startwatch(result - watch.ElapsedTicks);
             }
             else
@@ -294,14 +283,8 @@ namespace StartwatchDiagnostics
                 return new Startwatch(0, watch.ElapsedTicks);
             }
         }
-        
-        [SecurityCritical]
-        [System.Security.SuppressUnmanagedCodeSecurity]
-        [DllImport("kernel32.dll")]
-        [ResourceExposure(ResourceScope.None)]
-        static extern bool QueryPerformanceCounter(out long value);
 
-        static bool QueryPerformanceCounterFallback(out long value) {
+        static bool QueryPerformanceCounter(out long value) {
             value = Stopwatch.GetTimestamp();
             return true;
         }

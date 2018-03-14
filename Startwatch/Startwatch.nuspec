@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<package >
+<metadata>
+<id>Startwatch</id>
+<authors>hannasm</authors>
+<owners>hannasm</owners>
+<licenseUrl>https://github.com/hannasm/StartwatchDotnet/LICENSE</licenseUrl>
+<projectUrl>https://github.com/hannasm/StartwatchDotnet</projectUrl>
+<requireLicenseAcceptance>false</requireLicenseAcceptance>
+<description>A high performance alternative to System.Diagnostics.Stopwatch that assumes some different use cases</description>
+<copyright>Copyright 2017</copyright>
+<version>
+2.0.0
+</version>
+<releaseNotes>
+* 2.0.0 - convert to dotnet standard 2.0
+* 1.0.0 - initial release
+</releaseNotes>
+</metadata>
+<files>
+<file src="../readme.md" target="content/README_Startwatch.md" />
+<file src="../LICENSE.md" target="content/LICENSE_Startwatch.md" />
+<file src="bin/Release/netstandard2.0/*.dll" target="lib/netstandard2.0" />
+<file src="bin/Release/netstandard2.0/*.pdb" target="lib/netstandard2.0" />
+<file src="bin/Release/netstandard2.0/*.xml" target="lib/netstandard2.0" />
+</files>
+</package>
+<!-- vim: set expandtab ts=2 sw=2:  -->

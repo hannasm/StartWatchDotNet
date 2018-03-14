@@ -7,8 +7,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ExpressiveLogging.V1.SystemDiagnosticsLogging;
-using ExpressiveLogging.V1;
+using ExpressiveLogging.SystemDiagnosticsLogging;
+using ExpressiveLogging;
 using ExpressiveAssertions;
 
 namespace StartwatchDiagnostics.Tests

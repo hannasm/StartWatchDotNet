@@ -1,7 +1,7 @@
-﻿using ExpressiveLogging.V1;
-using ExpressiveLogging.V1.AssertableLogging;
-using ExpressiveLogging.V1.CompositeLogging;
-using ExpressiveLogging.V1.SystemDiagnosticsLogging;
+﻿using ExpressiveLogging;
+using ExpressiveLogging.AssertableLogging;
+using ExpressiveLogging.CompositeLogging;
+using ExpressiveLogging.SystemDiagnosticsLogging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;

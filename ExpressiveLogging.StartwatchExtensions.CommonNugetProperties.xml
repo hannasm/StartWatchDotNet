@@ -1,0 +1,7 @@
+﻿    <authors>hannasm</authors>
+    <owners>hannasm</owners>
+    <licenseUrl>https://github.com/hannasm/StartwatchDotnet/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/hannasm/StartwatchDotnet</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extension methods for ExpressiveLogging that simplify integration with the Startwatch</description>
+    <copyright>Copyright 2017</copyright>

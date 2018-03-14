@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+<metadata>
+<id>ExpressiveLogging.StartwatchExtensions</id>
+<authors>hannasm</authors>
+<owners>hannasm</owners>
+<licenseUrl>https://github.com/hannasm/StartwatchDotnet/LICENSE</licenseUrl>
+<projectUrl>https://github.com/hannasm/StartwatchDotnet</projectUrl>
+<requireLicenseAcceptance>false</requireLicenseAcceptance>
+<description>Extension methods for ExpressiveLogging that simplify integration with the Startwatch</description>
+<copyright>Copyright 2017</copyright>
+<version>
+2.0.0
+</version>
+<releaseNotes>
+* 2.0.0 - convert to dotnet standard 2.0
+* 1.0.0 - initial release
+</releaseNotes>
+<dependencies>
+<group targetFramework=".NETStandard2.0">
+<dependency id="ExpressiveLogging" version="[2.0,3.0)" />
+<dependency id="Startwatch" version="[2.0,3.0)" />
+</group>
+</dependencies>
+</metadata>
+<files>
+<file src="../readme.md" target="content/README_ExpressiveLogging_StartwatchExtensions.md" />
+<file src="../LICENSE.md" target="content/LICENSE_ExpressiveLogging_StartwatchExtensions.md" />
+<file src="bin/Release/netstandard2.0/ExpressiveLogging.StartwatchExtensions.dll" target="lib/netstandard2.0" />
+<file src="bin/Release/netstandard2.0/ExpressiveLogging.StartwatchExtensions.pdb" target="lib/netstandard2.0" />
+</files>
+</package>
+<!-- vim: set expandtab ts=2 sw=2:  -->

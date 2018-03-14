@@ -21,7 +21,7 @@ namespace StartwatchDiagnostics.Tests
         }
         public void AssertStopwatch(long expectedTicks, Startwatch actual, string message, params object[] fmt)
         {
-            if (expectedTicks + 10000 < actual.ElapsedTicks || expectedTicks - 10000 > actual.ElapsedTicks)
+            if (expectedTicks + 20000 < actual.ElapsedTicks || expectedTicks - 20000 > actual.ElapsedTicks)
             {
                 var msg = "Within 10,0000 micro seconds.";
                 if (message != null && fmt != null)

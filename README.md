@@ -1,11 +1,13 @@
 # StartwatchDotnet
 ## Versioning
 
-This is version 1.0.0 of the StartwatchDotnet library.
+This is version 2.0.0 of the StartwatchDotnet library.
 
-The base package is available from nuget at: https://www.nuget.org/packages/StartwatchDotnet/1.0.0
+The base package is available from nuget at: https://www.nuget.org/packages/Startwatch/2.0.0
 
-The source for this release is available on github at: https://github.com/hannasm/StartwatchDotnet/releases/tag/1.0.0
+A separate package with extensions for ExpressiveLogging are available from nuget at: https://www.nuget.org/packages/ExpressiveLogging.StartwatchExtensions/2.0.0
+
+The source for this release is available on github at: https://github.com/hannasm/StartwatchDotnet/releases/tag/2.0.0
 
 ## Description
 Startwatch is an alternative to System.Diagnostics.Stopwatch that is based on some different assumptions about how it will be used:
@@ -103,5 +105,28 @@ tools.
 
 *More documentation is needed here*
 
+## Build Environment
+
+basic build from a commandline is performed with `dotnet build`
+
+unit tests may be run with `dotnet test`
+
+when preparing a new release you must perform all of the following steps:
+  * update version number in Starwatch.VersionNumber.md
+  * update version number and package links in README.md
+  * update release notes in Startwatch.ReleaseNotes.md
+  * ensure unit tests are passing
+  * perform a release build with `dotnet build -c release`
+  * commit final version of all artifacts to source control
+  * publish nuget packages
+  * create tag for release on github
+
+to push a new version to nuget you must pack and push release builds
+
+```
+dotnet pack -c release
+dotnet nuget push <path to nupkg> -k <nuget key here> -s https://www.nuget.org/api/v2/packages
+```
+
 ## Release notes
-* 1.0.0 - initial release
+[For Release Notes See Here](Startwatch.ReleaseNotes.md)
